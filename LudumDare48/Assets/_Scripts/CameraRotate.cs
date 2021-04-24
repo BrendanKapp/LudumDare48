@@ -15,8 +15,6 @@ public class CameraRotate : MonoBehaviour
     private void Update()
     {
         float horizontal = CrossPlatformInputManager.GetAxis("Horizontal");
-        //transform.localRotation = Quaternion.Euler(0, 0, horizontal * maxRotation);
-        //transform.rotation = Quaternion.Euler(0, 0, horizontal * cameraRotateMultiplier);
         if (horizontal > 0)
         {
             if (currentRotation > -maxRotation) Rotate(-1);

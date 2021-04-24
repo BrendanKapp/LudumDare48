@@ -6,12 +6,10 @@ public class TerrainGenerator : MonoBehaviour
 {
 
     [SerializeField]
-    private string terrainObjectName = "Terrain";
+    private string[] terrainObjectName;
     [SerializeField]
     private int terrainSize = 10;
-    [SerializeField]
     private TerrainObject[,,] map = new TerrainObject[3, 3, 3];
-    [SerializeField]
     private Vector3 mapOffset = new Vector3(0, 0, 0); //offset is measured in world position
 
     [SerializeField]
@@ -20,8 +18,11 @@ public class TerrainGenerator : MonoBehaviour
     [SerializeField]
     private Transform player;
 
+    private bool debug = false;
+
     private void Awake()
     {
+        mapOffset = Vector3.one * -terrainSize;
         Setup();
     }
     private void Update()
@@ -57,34 +58,28 @@ public class TerrainGenerator : MonoBehaviour
         float lowerBound = 0.5f;
         if (check.x > upperBound)
         {
-            print("right");
             // transition terrain right
             TerrainTransition(Vector3.right);
         } else if (check.x < lowerBound)
         {
-            print("left");
             // transition terrain left
             TerrainTransition(Vector3.left);
         }
         if (check.z > upperBound)
         {
-            print("forward");
             // transition terrain forward
             TerrainTransition(Vector3.forward);
         } else if (check.z < lowerBound)
         {
-            print("back");
             // transition terrain back
             TerrainTransition(Vector3.back);
         }
         if (check.y > upperBound)
         {
-            print("up");
             // transition terrain up
             TerrainTransition(Vector3.up);
         } else if (check.y < lowerBound)
         {
-            print("down");
             // transition terrain down
             TerrainTransition(Vector3.down);
         }
@@ -95,7 +90,7 @@ public class TerrainGenerator : MonoBehaviour
         // move old squares in memory to new positions
         // delete old squares if out of bounds
         mapOffset += newPosition * terrainSize;
-        print("Terrain Transition " + newPosition);
+        if (debug) print("Terrain Transition " + newPosition);
         Vector3 offset = -newPosition; // create offset vector
         CleanHoldMap();
         for (int x = 0; x < 3; x++)
@@ -122,36 +117,24 @@ public class TerrainGenerator : MonoBehaviour
         if (map[(int)position.x, (int)position.y, (int)position.z] == null)
         {
             // add a terrain object
-            TerrainObject terrain = ObjectPooler.PoolObject(terrainObjectName).GetComponent<TerrainObject>();
+            TerrainObject terrain = ObjectPooler.PoolObject(terrainObjectName[Random.Range(0, terrainObjectName.Length - 1)]).GetComponent<TerrainObject>();
             map[(int)position.x, (int)position.y, (int)position.z] = terrain;
             terrain.transform.position = ConvertMapToWorld((int)position.x, (int)position.y, (int)position.z);
+            terrain.transform.rotation = Quaternion.Euler(0, 90 * Random.Range(0, 3), 0);
             terrain.gameObject.SetActive(true);
-            print("Adding sqare " + position);
+            if(debug) print("Adding sqare " + position);
         }
     }
     private void RemoveSquareIfNotNull(int x, int y, int z)
     {
         if (map[x, y, z] != null)
         {
-            print("Square removed " + new Vector3(x, y, z));
+            if(debug) print("Square removed " + new Vector3(x, y, z));
             map[x, y, z].gameObject.SetActive(false);
             map[x, y, z] = null;
         }
     }
     private TerrainObject[,,] holdMap = new TerrainObject[3, 3, 3];
-    // private void MapToHoldMap()
-    // {
-    //     for (int x = 0; x < 3; x++)
-    //     {
-    //         for (int y = 0; y < 3; y++)
-    //         {
-    //             for (int z = 0; z < 3; z++)
-    //             {
-    //                 holdMap[x, y, z] = map[x, y, z];
-    //             }
-    //         }
-    //     }
-    // }
     private void CleanHoldMap()
     {
         for (int x = 0; x < 3; x++)
@@ -198,20 +181,18 @@ public class TerrainGenerator : MonoBehaviour
             RemoveSquareIfNotNull(x0, y0, z0);
         } else {
             // move square
-            print("Moving square (" + x0 + ", " + y0 + ", " + z0 + ") (" + x1 + ", " + y1 + ", " + z1 + ")");
+            if(debug) print("Moving square (" + x0 + ", " + y0 + ", " + z0 + ") (" + x1 + ", " + y1 + ", " + z1 + ")");
             holdMap[x1, y1, z1] = map[x0, y0, z0];
         }
     }
     private Vector3 ConvertWorldToMap(Vector3 position)
     {
         Vector3 converted = (position - mapOffset) / terrainSize;
-        //print("Converted W2M " + position + " to " + converted);
         return converted;
     }
     private Vector3 ConvertMapToWorld(int x, int y, int z)
     {
         Vector3 converted = new Vector3(x, y, z) * terrainSize + mapOffset;
-        //print("Converted M2W " + x + ", " + y + ", " + z + " to " + converted);
         return converted;
     }
 }
