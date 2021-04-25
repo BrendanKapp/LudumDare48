@@ -37,7 +37,6 @@ public class GameController : MonoBehaviour
         minotaurController.gameObject.SetActive(false);
         StopCoroutine(gameRoutine);
         UIManager.main.SetHighScore(Time.time - startTime);
-        UIManager.main.ShowEndGame();
     }
     private IEnumerator GameRoutine()
     {

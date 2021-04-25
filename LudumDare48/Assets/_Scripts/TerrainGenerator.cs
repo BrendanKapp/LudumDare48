@@ -8,6 +8,8 @@ public class TerrainGenerator : MonoBehaviour
     [SerializeField]
     private string[] terrainObjectName;
     [SerializeField]
+    private string easyObjectName;
+    [SerializeField]
     private int terrainSize = 10;
     private int xSize = 5;
     private int ySize = 3;
@@ -29,7 +31,7 @@ public class TerrainGenerator : MonoBehaviour
         map = new TerrainObject[xSize, ySize, zSize];
         holdMap = new TerrainObject[xSize, ySize, zSize];
         mapOffset = new Vector3((xSize - 1) / 2, (ySize - 1) / 2, (zSize - 1) / 2) * -terrainSize;
-        print("Map Offset " + mapOffset);
+        if(debug) print("Map Offset " + mapOffset);
         Setup();
     }
     private void Update()
@@ -52,7 +54,7 @@ public class TerrainGenerator : MonoBehaviour
                     //map[x, y, z] = null;
                     // if position has a or more mid, add a square
                     int mids = (x == ((xSize - 1) / 2) ? 1 : 0) + (y == ((ySize - 1) / 2) ? 1 : 0) + (z == ((zSize - 1) / 2) ? 1 : 0);
-                    if (mids > 1) AddSquareIfNull(new Vector3(x, y, z));
+                    if (mids > 1) AddSquareIfNull(new Vector3(x, y, z), true);
                 }
             }
         }
@@ -128,7 +130,8 @@ public class TerrainGenerator : MonoBehaviour
         AddSquareIfNull(center + new Vector3(1, 0, -1));
         AddSquareIfNull(center + new Vector3(-1, 0, -1));
     }
-    private void AddSquareIfNull(Vector3 position)
+
+    private void AddSquareIfNull(Vector3 position, bool lightOnWalls)
     {
         if (map[(int)position.x, (int)position.y, (int)position.z] == null)
         {
@@ -136,7 +139,8 @@ public class TerrainGenerator : MonoBehaviour
             TerrainObject terrain = null;
             while(terrain == null)
             {
-                terrain = ObjectPooler.PoolObject("Terrain", terrainObjectName[Random.Range(0, terrainObjectName.Length - 1)]).GetComponent<TerrainObject>();
+                string terrainName = lightOnWalls ? easyObjectName : terrainObjectName[Random.Range(0, terrainObjectName.Length - 1)];
+                terrain = ObjectPooler.PoolObject("Terrain", terrainName).GetComponent<TerrainObject>();
             }
             map[(int)position.x, (int)position.y, (int)position.z] = terrain;
             terrain.transform.position = ConvertMapToWorld((int)position.x, (int)position.y, (int)position.z);
@@ -144,6 +148,10 @@ public class TerrainGenerator : MonoBehaviour
             terrain.gameObject.SetActive(true);
             if(debug) print("Adding sqare " + position);
         }
+    }
+    private void AddSquareIfNull(Vector3 position)
+    {
+        AddSquareIfNull(position, false);
     }
     private void RemoveSquareIfNotNull(int x, int y, int z)
     {

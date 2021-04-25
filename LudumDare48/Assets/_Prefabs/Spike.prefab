@@ -157,8 +157,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46811735d41845613958933cde07cca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageLines:
+  - You were killed by a falling spike
+  - A dangerous spike fell on your head
+  - Spike go brrrrrrrr, you go blehhh
+  - You were impaled by a spike
+  - A spike fell from the ceiling onto you head
   hitEffectName: HitEffect
-  rockSmashSound: {fileID: 5393970328106618006}
 --- !u!82 &5393970328106618006
 AudioSource:
   m_ObjectHideFlags: 0

@@ -5,6 +5,8 @@ using UnityEngine;
 public class HitboxController : MonoBehaviour
 {
     [SerializeField]
+    private string[] damageLines;
+    [SerializeField]
     private float scale = 3f;
     public void Activate()
     {
@@ -29,7 +31,7 @@ public class HitboxController : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            other.GetComponent<PlayerController>().TakeDamage();
+            other.GetComponent<PlayerController>().TakeDamage(damageLines[damageLines.Length - 1]);
         }
     }
 }

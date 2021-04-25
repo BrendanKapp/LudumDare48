@@ -83,8 +83,8 @@ public class MinotaurController : MonoBehaviour
         {
             LookTowardsPlayer(5);
             AudioSource roarSound = Sound.GetSound("Roar");
-            roarSound.pitch = Random.Range(0.2f, 0.5f);
-            roarSound.volume = Random.value / 2f + 0.5f;
+            roarSound.pitch = Random.Range(0.7f, 1.2f);
+            roarSound.volume = Random.value * 2f + 2f;
             roarSound.transform.position = transform.position;
             roarSound.Play();
             lastAttackTime = Time.time;

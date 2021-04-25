@@ -5,6 +5,8 @@ using UnityEngine;
 public class SpikeController : MonoBehaviour
 {
     [SerializeField]
+    private string[] damageLines;
+    [SerializeField]
     private string hitEffectName = "HitEffect";
     private Rigidbody rb;
     private BoxCollider boxCollider;
@@ -46,7 +48,7 @@ public class SpikeController : MonoBehaviour
         FadeInstant();
         if (distance < 10)
         {
-            PlayerController.main.TakeDamage();
+            PlayerController.main.TakeDamage(damageLines[damageLines.Length - 1]);
         }
     }
     private IEnumerator Fade(int time, bool setActive)

@@ -30,7 +30,8 @@ public class UIManager : MonoBehaviour
     private GameObject newHighScore;
     [SerializeField]
     private Text screenSizeText;
-
+    [SerializeField]
+    private Text byWhoText;
     [SerializeField]
     private Text soundText;
 
@@ -57,13 +58,14 @@ public class UIManager : MonoBehaviour
     }
     public void SetHighScore(float newScore)
     {
+        scoreText.text = "Score: " + FloatWithTwoDecimals(newScore);
+        highScoreText.text = "High Score: " + FloatWithTwoDecimals(highScore.value);
         if (newScore > highScore.value)
         {
             highScore.value = newScore;
             newHighScore.SetActive(true);
+            highScoreText.text = "*High Score: " + FloatWithTwoDecimals(highScore.value) + "*";
         }
-        scoreText.text = "Score: " + FloatWithTwoDecimals(newScore);
-        highScoreText.text = "High Score: " + FloatWithTwoDecimals(highScore.value);
     }
     /*
      * @desc pauses the game
@@ -98,7 +100,7 @@ public class UIManager : MonoBehaviour
      */
     public void Play()
     {
-        Invoke("StartGame", 1);
+        Invoke("StartGame", 0.1f);
     }
     private void StartGame()
     {
@@ -112,8 +114,9 @@ public class UIManager : MonoBehaviour
         gameOver.SetActive(false);
         mainMenu.SetActive(true);
     }
-    public void ShowEndGame ()
+    public void ShowEndGame (string byWho)
     {   
+        byWhoText.text = "\"" + byWho + "\"";
         gameOver.SetActive(true);
     }
     public void SetSound ()

@@ -129,6 +129,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 895e128f9f3d234149de5d26736d36dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageLines:
+  - You were killed by the Minotaur
+  - You were killed by the Minotaur's big hammer
+  - The Minotaur ate you for lunch
+  - You cannot escape the Minotaur
+  - The Minotaur is displeased by your lack of skill
+  - '"Hey bro, get outta my cave yo" -Minotaur'
+  - '"Dude, like chill, you can try again" -Minotaur'
+  - The Minotaur is hit you with a big blunt hammer
+  - You are the Minotaur's whack-a-mole game
+  - The Minotaur crushed you with ease
   scale: 2
 --- !u!135 &1938057779
 SphereCollider:

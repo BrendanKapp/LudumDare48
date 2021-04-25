@@ -48,11 +48,11 @@ public class PlayerController : MonoBehaviour
     {
 
     }
-    public void TakeDamage()
+    public void TakeDamage(string byWho)
     {
         firstPersonController.enabled = false;
         GameController.main.StopGame();
-        UIManager.main.ShowEndGame();
+        UIManager.main.ShowEndGame(byWho);
         firstPersonController.EnableCursor();
     }
     public void Activate()
