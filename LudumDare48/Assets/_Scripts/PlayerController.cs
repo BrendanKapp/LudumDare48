@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityStandardAssets.Characters.FirstPerson;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerController main;
     [SerializeField]
     private float hookPower = 50;
     [SerializeField]
@@ -16,32 +18,20 @@ public class PlayerController : MonoBehaviour
     private bool hookActive = false;
     private Rigidbody rb;
     private CharacterController characterController;
+    private FirstPersonController firstPersonController;
 
-    private void Start()
+    private void Awake()
     {
+        main = this;
         rb = GetComponent<Rigidbody>();
         characterController = GetComponent<CharacterController>();
+        firstPersonController = GetComponent<FirstPersonController>();
     }
-    // private void Update()
-    // {
-    //     if (Input.GetMouseButtonDown(0))
-    //     {
-    //         if (!hookActive)
-    //         {
-    //             ShootHook();
-    //         } else {
-    //             RetractHook();
-    //         }
-    //         hookActive = !hookActive;
-    //     }
-    // }
-    // private void FixedUpdate()
-    // {
-    //     if (Input.GetMouseButton(1))
-    //     {
-    //         PullTowards();
-    //     }
-    // }
+    private void Start()
+    {
+        firstPersonController.enabled = false;
+        firstPersonController.EnableCursor();
+    }
     private void PullTowards()
     {
         Vector3 dir = (hook.transform.position - transform.position);
@@ -60,7 +50,15 @@ public class PlayerController : MonoBehaviour
     }
     public void TakeDamage()
     {
-        print("Player Lost");
+        firstPersonController.enabled = false;
+        GameController.main.StopGame();
+        UIManager.main.ShowEndGame();
+        firstPersonController.EnableCursor();
+    }
+    public void Activate()
+    {
+        firstPersonController.enabled = true;
+        firstPersonController.DisableCursor();
     }
     private IEnumerator RetrackHookRoutine()
     {

@@ -49,7 +49,6 @@
      <Compile Include="Assets\Ameye\RockStudio\Scripts\Editor\Helper Scripts\RockMeshProcessor.cs" />
      <Compile Include="Assets\Ameye\RockStudio\Scripts\Editor\Helper Scripts\MeshCombiner.cs" />
      <Compile Include="Assets\Ameye\RockStudio\Scripts\Editor\Helper Scripts\EditorUtilities.cs" />
-     <Compile Include="Assets\ExplosiveLLC\Editor\SetupInputLayers.cs" />
     <Reference Include="UnityEngine">
         <HintPath>/home/bkapp/Desktop/GameDev/zUnityEngine/2020.3.3f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

@@ -15,12 +15,12 @@ public class HitboxController : MonoBehaviour
     {
         for (int i = 0; i < 30; i++)
         {
-            transform.localScale = Vector3.one * scale * Mathf.Lerp(1, 4, 0.05f);
+            transform.localScale = Vector3.one * Mathf.Lerp(transform.localScale.x, 4f * scale, 0.2f);
             yield return new WaitForSeconds(0.1f);
         }
         for (int i = 30; i > 0; i--)
         {
-            transform.localScale = Vector3.one * scale * (i / 30f);
+            transform.localScale = Vector3.one * scale * 4f * (i / 30f);
             yield return new WaitForSeconds(0.1f);
         }
         gameObject.SetActive(false);

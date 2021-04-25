@@ -136,7 +136,7 @@ public class TerrainGenerator : MonoBehaviour
             TerrainObject terrain = null;
             while(terrain == null)
             {
-                terrain = ObjectPooler.PoolObject(terrainObjectName[Random.Range(0, terrainObjectName.Length - 1)]).GetComponent<TerrainObject>();
+                terrain = ObjectPooler.PoolObject("Terrain", terrainObjectName[Random.Range(0, terrainObjectName.Length - 1)]).GetComponent<TerrainObject>();
             }
             map[(int)position.x, (int)position.y, (int)position.z] = terrain;
             terrain.transform.position = ConvertMapToWorld((int)position.x, (int)position.y, (int)position.z);

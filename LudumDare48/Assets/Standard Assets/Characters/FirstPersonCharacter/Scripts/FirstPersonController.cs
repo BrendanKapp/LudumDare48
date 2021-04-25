@@ -84,6 +84,15 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_PreviouslyGrounded = m_CharacterController.isGrounded;
         }
 
+        public void DisableCursor()
+        {
+            m_MouseLook.SetCursorLock(true);
+        }
+        public void EnableCursor()
+        {
+            m_MouseLook.SetCursorLock(false);
+        }
+
 
         private void PlayLandingSound()
         {
@@ -171,6 +180,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
             // excluding sound at index 0
             int n = Random.Range(1, m_FootstepSounds.Length);
             m_AudioSource.clip = m_FootstepSounds[n];
+            m_AudioSource.pitch = Random.Range(0.2f, 0.5f);
+            m_AudioSource.volume = Random.value / 2 + 0.5f;
             m_AudioSource.PlayOneShot(m_AudioSource.clip);
             // move picked sound to index 0 so it's not picked next time
             m_FootstepSounds[n] = m_FootstepSounds[0];
