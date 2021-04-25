@@ -12,6 +12,8 @@ public class CameraRotate : MonoBehaviour
     [SerializeField]
     private float haltAngle = 0.1f;
     private float currentRotation;
+
+    public static int screenShakeAmount = 0;
     private void Update()
     {
         float horizontal = CrossPlatformInputManager.GetAxis("Horizontal");
@@ -38,5 +40,20 @@ public class CameraRotate : MonoBehaviour
     {
         transform.Rotate(0, 0, direction * rotationIncrement * Time.deltaTime);
         currentRotation += direction * rotationIncrement * Time.deltaTime; 
+    }
+
+    [SerializeField]
+    private int screenShakeMultiplier = 1;
+
+    private void FixedUpdate()
+    {
+        Move();
+    }
+    private void Move()
+    {
+        transform.localPosition = Vector3.zero;
+        transform.localPosition += Random.insideUnitSphere * screenShakeAmount * screenShakeMultiplier * 0.02f;
+        screenShakeAmount--;
+        screenShakeAmount = Mathf.Clamp(screenShakeAmount, 0, 100);
     }
 }

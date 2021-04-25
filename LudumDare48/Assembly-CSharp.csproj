@@ -36,18 +36,88 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Ameye\RockStudio\Scripts\Convex Hull\MIConvexHull\ConvexHull\ObjectManager.cs" />
+     <Compile Include="Assets\ExplosiveLLC\SuperCharacterController\Code\Gravity.cs" />
      <Compile Include="Assets\Asset_ObjectPooler\Pool.cs" />
-     <Compile Include="Assets\Asset_ObjectPooler\Errors.cs" />
-     <Compile Include="Assets\Asset_ObjectPooler\PoolManager.cs" />
-     <Compile Include="Assets\Asset_ObjectPooler\IPoolable.cs" />
-     <Compile Include="Assets\Asset_ObjectPooler\PoolManagerEditor.cs" />
-     <Compile Include="Assets\Asset_ObjectPooler\ObjectPooler.cs" />
-     <Compile Include="Assets\Asset_ObjectPooler\PoolEditor.cs" />
-     <Compile Include="Assets\_Scripts\TerrainGenerator.cs" />
+     <Compile Include="Assets\ExplosiveLLC\Demo Elements\Code\GUIControls.cs" />
+     <Compile Include="Assets\ExplosiveLLC\SuperCharacterController\Code\PlayerMachineDebug.cs" />
+     <Compile Include="Assets\Ameye\RockStudio\Scripts\Convex Hull\MIConvexHull\ConvexHull\Algorithm\Data.cs" />
+     <Compile Include="Assets\ExplosiveLLC\RPG Character Mecanim Animation Pack FREE\Code\Actions\InstantActionHandler.cs" />
+     <Compile Include="Assets\ExplosiveLLC\RPG Character Mecanim Animation Pack FREE\Code\RPGCharacterAnimatorEvents.cs" />
+     <Compile Include="Assets\ExplosiveLLC\Demo Elements\Code\CameraController.cs" />
+     <Compile Include="Assets\ExplosiveLLC\RPG Character Mecanim Animation Pack FREE\Code\RPGCharacterInputController.cs" />
+     <Compile Include="Assets\ExplosiveLLC\RPG Character Mecanim Animation Pack FREE\Code\Actions\Character\Attack.cs" />
+     <Compile Include="Assets\ExplosiveLLC\RPG Character Mecanim Animation Pack FREE\Code\Actions\Null.cs" />
      <Compile Include="Assets\_Scripts\TerrainObject.cs" />
+     <Compile Include="Assets\Ameye\RockStudio\Scripts\Convex Hull\MIConvexHull\Configuration.cs" />
+     <Compile Include="Assets\ExplosiveLLC\SuperCharacterController\SuperCharacterController\Core\SuperStateMachine.cs" />
+     <Compile Include="Assets\ExplosiveLLC\RPG Character Mecanim Animation Pack FREE\Code\RPGCharacterMovementController.cs" />
+     <Compile Include="Assets\ExplosiveLLC\SuperCharacterController\Code\SimpleStateMachine.cs" />
+     <Compile Include="Assets\ExplosiveLLC\RPG Character Mecanim Animation Pack FREE\Code\Actions\Movement\Idle.cs" />
+     <Compile Include="Assets\ExplosiveLLC\RPG Character Mecanim Animation Pack FREE\Code\Actions\Movement\Knockback.cs" />
+     <Compile Include="Assets\Ameye\RockStudio\Scripts\Convex Hull\MIConvexHull\IVertex.cs" />
+     <Compile Include="Assets\ExplosiveLLC\RPG Character Mecanim Animation Pack FREE\Code\IKHands.cs" />
+     <Compile Include="Assets\ExplosiveLLC\SuperCharacterController\Code\PlayerMachine.cs" />
+     <Compile Include="Assets\Ameye\RockStudio\Scripts\Convex Hull\MIConvexHull\Triangulation\TriangulationCell.cs" />
+     <Compile Include="Assets\Asset_ObjectPooler\IPoolable.cs" />
+     <Compile Include="Assets\ExplosiveLLC\Demo Elements\Code\HighJumpTrampoline.cs" />
+     <Compile Include="Assets\Asset_ObjectPooler\PoolManagerEditor.cs" />
+     <Compile Include="Assets\Ameye\RockStudio\Scripts\Convex Hull\MIConvexHull\Triangulation.cs" />
+     <Compile Include="Assets\ExplosiveLLC\SuperCharacterController\SuperCharacterController\Core\SuperCollisionType.cs" />
+     <Compile Include="Assets\ExplosiveLLC\SuperCharacterController\SuperCharacterController\Math3d.cs" />
+     <Compile Include="Assets\Ameye\RockStudio\Scripts\Convex Hull\MIConvexHull\ConvexHull\Collections.cs" />
+     <Compile Include="Assets\ExplosiveLLC\RPG Character Mecanim Animation Pack FREE\Code\AnimationData.cs" />
+     <Compile Include="Assets\Ameye\RockStudio\Scripts\Convex Hull\MIConvexHull\ConvexHull\Algorithm\Result.cs" />
+     <Compile Include="Assets\ExplosiveLLC\RPG Character Mecanim Animation Pack FREE\Code\RPGCharacterNavigationController.cs" />
+     <Compile Include="Assets\ExplosiveLLC\RPG Character Mecanim Animation Pack FREE\Code\Actions\Movement\Jump.cs" />
+     <Compile Include="Assets\ExplosiveLLC\RPG Character Mecanim Animation Pack FREE\Code\Actions\Weapon\SwitchWeapon.cs" />
+     <Compile Include="Assets\_Scripts\PlayerController.cs" />
+     <Compile Include="Assets\ExplosiveLLC\SuperCharacterController\SuperCharacterController\Core\BSPTree.cs" />
+     <Compile Include="Assets\Ameye\RockStudio\Scripts\Convex Hull\MIConvexHull\ConvexHull\ConvexFace.cs" />
+     <Compile Include="Assets\ExplosiveLLC\SuperCharacterController\SuperCharacterController\Core\SuperMath.cs" />
+     <Compile Include="Assets\Asset_ObjectPooler\PoolEditor.cs" />
+     <Compile Include="Assets\Ameye\RockStudio\Scripts\Convex Hull\MIConvexHull\Triangulation\VoronoiMesh.cs" />
+     <Compile Include="Assets\Ameye\RockStudio\Scripts\Convex Hull\MIConvexHull\Triangulation\VoronoiEdge.cs" />
+     <Compile Include="Assets\Asset_ObjectPooler\Errors.cs" />
+     <Compile Include="Assets\Ameye\RockStudio\Scripts\Handle.cs" />
+     <Compile Include="Assets\Ameye\RockStudio\Scripts\Convex Hull\MIConvexHull\ConvexHull.cs" />
+     <Compile Include="Assets\ExplosiveLLC\RPG Character Mecanim Animation Pack FREE\Code\Actions\Movement\Fall.cs" />
+     <Compile Include="Assets\ExplosiveLLC\RPG Character Mecanim Animation Pack FREE\Code\Actions\Movement\DiveRoll.cs" />
+     <Compile Include="Assets\ExplosiveLLC\SuperCharacterController\SuperCharacterController\Core\SuperCollider.cs" />
+     <Compile Include="Assets\ExplosiveLLC\SuperCharacterController\Code\PlayerInputController.cs" />
+     <Compile Include="Assets\ExplosiveLLC\RPG Character Mecanim Animation Pack FREE\Code\Actions\Movement\MovementActionHandler.cs" />
+     <Compile Include="Assets\ExplosiveLLC\RPG Character Mecanim Animation Pack FREE\Code\Actions\Movement\Move.cs" />
+     <Compile Include="Assets\ExplosiveLLC\SuperCharacterController\Code\PlayerCamera.cs" />
+     <Compile Include="Assets\Asset_ObjectPooler\PoolManager.cs" />
+     <Compile Include="Assets\ExplosiveLLC\SuperCharacterController\SuperCharacterController\DebugDraw.cs" />
+     <Compile Include="Assets\ExplosiveLLC\RPG Character Mecanim Animation Pack FREE\Code\Actions\Character\SlowTime.cs" />
+     <Compile Include="Assets\_Scripts\TerrainGenerator.cs" />
+     <Compile Include="Assets\ExplosiveLLC\RPG Character Mecanim Animation Pack FREE\Code\Actions\Movement\Navigation.cs" />
+     <Compile Include="Assets\ExplosiveLLC\SuperCharacterController\SuperCharacterController\Core\BruteForceMesh.cs" />
+     <Compile Include="Assets\ExplosiveLLC\RPG Character Mecanim Animation Pack FREE\Code\CoroutineQueue.cs" />
+     <Compile Include="Assets\Ameye\RockStudio\Scripts\Convex Hull\MIConvexHull\ConvexHull\MathHelper.cs" />
+     <Compile Include="Assets\_Scripts\MinotaurController.cs" />
+     <Compile Include="Assets\Ameye\RockStudio\Scripts\Convex Hull\MIConvexHull\ConvexHull\Algorithm\Core.cs" />
+     <Compile Include="Assets\ExplosiveLLC\RPG Character Mecanim Animation Pack FREE\Code\Actions\Movement\GetHit.cs" />
+     <Compile Include="Assets\ExplosiveLLC\RPG Character Mecanim Animation Pack FREE\Code\RPGCharacterWeaponController.cs" />
+     <Compile Include="Assets\Ameye\RockStudio\Scripts\Convex Hull\MIConvexHull\ConvexHull\DataModel.cs" />
+     <Compile Include="Assets\Ameye\RockStudio\Scripts\Convex Hull\MIConvexHull\Triangulation\DelaunayTrianglationInternal.cs" />
+     <Compile Include="Assets\ExplosiveLLC\RPG Character Mecanim Animation Pack FREE\Code\Actions\SimpleActionHandler.cs" />
+     <Compile Include="Assets\ExplosiveLLC\Demo Elements\Code\NoJumpSlime.cs" />
+     <Compile Include="Assets\Ameye\RockStudio\Scripts\Convex Hull\MIConvexHull\ConvexHull\Algorithm\Initialize.cs" />
+     <Compile Include="Assets\ExplosiveLLC\SuperCharacterController\SuperCharacterController\Core\SuperCharacterController.cs" />
+     <Compile Include="Assets\ExplosiveLLC\RPG Character Mecanim Animation Pack FREE\Code\Actions\ActionHandler.cs" />
+     <Compile Include="Assets\Asset_ObjectPooler\ObjectPooler.cs" />
+     <Compile Include="Assets\Ameye\RockStudio\Scripts\Convex Hull\MIConvexHull\Vertex.cs" />
+     <Compile Include="Assets\Ameye\RockStudio\Scripts\Convex Hull\MIConvexHull\Triangulation\DelaunayTriangulation.cs" />
+     <Compile Include="Assets\ExplosiveLLC\RPG Character Mecanim Animation Pack FREE\Code\RPGCharacterController.cs" />
+     <Compile Include="Assets\_Scripts\HookController.cs" />
      <Compile Include="Assets\_Scripts\CameraRotate.cs" />
+     <Compile Include="Assets\_Scripts\HitboxController.cs" />
      <None Include="Assets\LowPolyParticleEffects\ReadMe.txt" />
+     <None Include="Assets\Ameye\README.txt" />
      <None Include="Assets\BrokenVector\LowPolyTreePack\README.txt" />
+     <None Include="Assets\ExplosiveLLC\SuperCharacterController\SuperCharacterController\README.txt" />
     <Reference Include="UnityEngine">
         <HintPath>/home/bkapp/Desktop/GameDev/zUnityEngine/2020.3.3f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -622,6 +692,14 @@
       <Project>{c2b6f92b-8397-f9ea-407e-51d3681eb748}</Project>
       <Name>Unity.VSCode.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Universal.Shaders.csproj">
+      <Project>{bcf6ab24-e180-5f65-c455-7bdf610e2131}</Project>
+      <Name>Unity.RenderPipelines.Universal.Shaders</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Universal.Runtime.csproj">
+      <Project>{1dea82e8-db95-1a1b-c73e-c8f8125e8381}</Project>
+      <Name>Unity.RenderPipelines.Universal.Runtime</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.TextMeshPro.Editor.csproj">
       <Project>{0d18cb95-f0a4-3782-6563-2c409bf2fe67}</Project>
       <Name>Unity.TextMeshPro.Editor</Name>
@@ -630,9 +708,9 @@
       <Project>{68a71ae8-f89a-fc4b-2345-5a99a1899804}</Project>
       <Name>Unity.VisualStudio.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.Timeline.Editor.csproj">
-      <Project>{4643a0f8-32f8-a16a-b66d-fb6271aacada}</Project>
-      <Name>Unity.Timeline.Editor</Name>
+    <ProjectReference Include="Unity.Sysroot.Linux_x86_64.csproj">
+      <Project>{61db0dd1-505d-f996-a131-7c9f50c2005e}</Project>
+      <Name>Unity.Sysroot.Linux_x86_64</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Timeline.csproj">
       <Project>{f3a22f05-6dfa-0f49-9fa0-4a4204f56329}</Project>
@@ -642,6 +720,22 @@
       <Project>{588ed585-87f8-ac15-fc80-54e6947d085d}</Project>
       <Name>Unity.TextMeshPro</Name>
     </ProjectReference>
+    <ProjectReference Include="Unity.Searcher.Editor.csproj">
+      <Project>{902635ad-586d-c510-cd1c-877a707ca887}</Project>
+      <Name>Unity.Searcher.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.csproj">
+      <Project>{793a5cbb-6273-dbf0-dc53-71b0f0772028}</Project>
+      <Name>Unity.RenderPipelines.Core.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Toolchain.Linux-x86_64.csproj">
+      <Project>{a56e9840-475b-0b28-869d-682e9ee57933}</Project>
+      <Name>Unity.Toolchain.Linux-x86_64</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Postprocessing.Editor.csproj">
+      <Project>{d2db9a06-c24d-684a-9a5c-98493efb031f}</Project>
+      <Name>Unity.Postprocessing.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="UnityEditor.UI.csproj">
       <Project>{80df0150-855b-12bc-230c-a392b571bca1}</Project>
       <Name>UnityEditor.UI</Name>
@@ -650,77 +744,53 @@
       <Project>{bd1493aa-6cbe-8682-97cb-2c8e64a8a645}</Project>
       <Name>Unity.Rider.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{7ff4afc8-020e-d30c-7715-736b96c00328}</Project>
-      <Name>UnityEngine.UI</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.Universal.Shaders.csproj">
-      <Project>{bcf6ab24-e180-5f65-c455-7bdf610e2131}</Project>
-      <Name>Unity.RenderPipelines.Universal.Shaders</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.csproj">
-      <Project>{793a5cbb-6273-dbf0-dc53-71b0f0772028}</Project>
-      <Name>Unity.RenderPipelines.Core.Runtime</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Searcher.Editor.csproj">
-      <Project>{902635ad-586d-c510-cd1c-877a707ca887}</Project>
-      <Name>Unity.Searcher.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.Universal.Editor.csproj">
-      <Project>{d1fed587-ca8c-d77b-a0e3-be11b1e84e43}</Project>
-      <Name>Unity.RenderPipelines.Universal.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Mathematics.Editor.csproj">
-      <Project>{37b44097-2469-dba6-0b3c-b4be13e1d8b9}</Project>
-      <Name>Unity.Mathematics.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipeline.Universal.ShaderLibrary.csproj">
-      <Project>{9f0dc086-7e25-075d-b240-69b18562c764}</Project>
-      <Name>Unity.RenderPipeline.Universal.ShaderLibrary</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.Core.Editor.csproj">
-      <Project>{cbcb7c5c-81e2-7be9-a972-9baf9aad1a25}</Project>
-      <Name>Unity.RenderPipelines.Core.Editor</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.RenderPipelines.Core.ShaderLibrary.csproj">
       <Project>{9f1e8c02-09f7-aa93-30f9-f262cb16d873}</Project>
       <Name>Unity.RenderPipelines.Core.ShaderLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEngine.UI.csproj">
+      <Project>{7ff4afc8-020e-d30c-7715-736b96c00328}</Project>
+      <Name>UnityEngine.UI</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Mathematics.csproj">
       <Project>{b19c4109-7586-7092-6047-91a9e080f58e}</Project>
       <Name>Unity.Mathematics</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.csproj">
-      <Project>{49e20492-bf1d-08de-8878-eef2a9aef432}</Project>
-      <Name>Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary</Name>
-    </ProjectReference>
     <ProjectReference Include="Unity.ShaderGraph.Editor.csproj">
       <Project>{ec65dc74-fd82-38c4-d251-02850e605c7c}</Project>
       <Name>Unity.ShaderGraph.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.Universal.Runtime.csproj">
-      <Project>{1dea82e8-db95-1a1b-c73e-c8f8125e8381}</Project>
-      <Name>Unity.RenderPipelines.Universal.Runtime</Name>
+    <ProjectReference Include="Unity.Postprocessing.Runtime.csproj">
+      <Project>{ded54bdb-f2b5-9ee7-f393-fb1bb6853e9d}</Project>
+      <Name>Unity.Postprocessing.Runtime</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.Sysroot.Linux_x86_64.csproj">
-      <Project>{61db0dd1-505d-f996-a131-7c9f50c2005e}</Project>
-      <Name>Unity.Sysroot.Linux_x86_64</Name>
+    <ProjectReference Include="Unity.RenderPipelines.Universal.Editor.csproj">
+      <Project>{d1fed587-ca8c-d77b-a0e3-be11b1e84e43}</Project>
+      <Name>Unity.RenderPipelines.Universal.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.Toolchain.Linux-x86_64.csproj">
-      <Project>{a56e9840-475b-0b28-869d-682e9ee57933}</Project>
-      <Name>Unity.Toolchain.Linux-x86_64</Name>
+    <ProjectReference Include="Unity.RenderPipeline.Universal.ShaderLibrary.csproj">
+      <Project>{9f0dc086-7e25-075d-b240-69b18562c764}</Project>
+      <Name>Unity.RenderPipeline.Universal.ShaderLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.csproj">
+      <Project>{49e20492-bf1d-08de-8878-eef2a9aef432}</Project>
+      <Name>Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Timeline.Editor.csproj">
+      <Project>{4643a0f8-32f8-a16a-b66d-fb6271aacada}</Project>
+      <Name>Unity.Timeline.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Mathematics.Editor.csproj">
+      <Project>{37b44097-2469-dba6-0b3c-b4be13e1d8b9}</Project>
+      <Name>Unity.Mathematics.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.RenderPipelines.Core.Editor.csproj">
+      <Project>{cbcb7c5c-81e2-7be9-a972-9baf9aad1a25}</Project>
+      <Name>Unity.RenderPipelines.Core.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.SysrootPackage.Editor.csproj">
       <Project>{8385a452-51a4-8232-17af-fb381663a0ac}</Project>
       <Name>Unity.SysrootPackage.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Postprocessing.Editor.csproj">
-      <Project>{d2db9a06-c24d-684a-9a5c-98493efb031f}</Project>
-      <Name>Unity.Postprocessing.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Postprocessing.Runtime.csproj">
-      <Project>{ded54bdb-f2b5-9ee7-f393-fb1bb6853e9d}</Project>
-      <Name>Unity.Postprocessing.Runtime</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

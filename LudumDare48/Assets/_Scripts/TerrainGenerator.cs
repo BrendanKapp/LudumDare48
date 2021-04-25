@@ -130,7 +130,6 @@ public class TerrainGenerator : MonoBehaviour
     }
     private void AddSquareIfNull(Vector3 position)
     {
-        print("Square Position " + position);
         if (map[(int)position.x, (int)position.y, (int)position.z] == null)
         {
             // add a terrain object
@@ -205,15 +204,13 @@ public class TerrainGenerator : MonoBehaviour
             holdMap[x1, y1, z1] = map[x0, y0, z0];
         }
     }
-    private Vector3 ConvertWorldToMap(Vector3 position)
+    public Vector3 ConvertWorldToMap(Vector3 position)
     {
-        Vector3 converted = (position - mapOffset) / terrainSize;
-        return converted;
+        return (position - mapOffset) / terrainSize;
     }
-    private Vector3 ConvertMapToWorld(int x, int y, int z)
+    public Vector3 ConvertMapToWorld(int x, int y, int z)
     {
-        Vector3 converted = new Vector3(x, y, z) * terrainSize + mapOffset;
-        return converted;
+        return new Vector3(x, y, z) * terrainSize + mapOffset;
     }
 }
 
