@@ -39,7 +39,7 @@ public class MinotaurController : MonoBehaviour
         transform.rotation = Quaternion.identity;
         transform.LookAt(player.position);
         currentState = MinotaurState.teleport;
-        lastAttackTime = Time.time - animationDelay + 0.5f;
+        lastSeenPlayer = Time.time;
     }
     private float lastSeenPlayer;
     private float teleportAfterTime = 5f;
@@ -108,7 +108,6 @@ public class MinotaurController : MonoBehaviour
     private Transform hitboxHitPoint;
     public void Hit()
     {
-        print("hit");
         CameraRotate.screenShakeAmount += 70;
         HitboxController hitbox = ObjectPooler.PoolObject(explodeEffectName).GetComponent<HitboxController>();
         hitbox.transform.position = hitboxHitPoint.position;

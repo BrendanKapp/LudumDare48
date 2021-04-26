@@ -118,6 +118,7 @@ public class UIManager : MonoBehaviour
     {   
         byWhoText.text = "\"" + byWho + "\"";
         gameOver.SetActive(true);
+        gameActive.SetActive(false);
     }
     public void SetSound ()
     {
