@@ -50,7 +50,6 @@ public class GameController : MonoBehaviour
     private float range = 25f;
     private void DropSpikes()
     {
-        if (Random.value > 0.7f) return;
         SpikeController spike = ObjectPooler.PoolObject(spikeName).GetComponent<SpikeController>();
         spike.transform.position = terrainGenerator.ConvertMapToWorld(2, 1, 2) + new Vector3(Random.Range(-range, range), 20, Random.Range(-range, range)); // lazy center
         spike.transform.localScale = Vector3.one * Random.Range(1f, 2f);

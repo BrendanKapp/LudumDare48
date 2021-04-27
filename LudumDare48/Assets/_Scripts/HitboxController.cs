@@ -31,7 +31,7 @@ public class HitboxController : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            other.GetComponent<PlayerController>().TakeDamage(damageLines[damageLines.Length - 1]);
+            other.GetComponent<PlayerController>().TakeDamage(damageLines[Random.Range(0, damageLines.Length - 1)]);
         }
     }
 }

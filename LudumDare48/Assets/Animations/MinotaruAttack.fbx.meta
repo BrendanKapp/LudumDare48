@@ -425,7 +425,7 @@ ModelImporter:
     second: RightHandProp
   - first:
       74: 7400000
-    second: Villager@Pickaxe-Mining01
+    second: Hit
   - first:
       95: 9500000
     second: //RootNode
@@ -461,7 +461,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Villager@Pickaxe-Mining01
+      name: Hit
       takeName: Default Take
       internalID: 0
       firstFrame: 0
