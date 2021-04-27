@@ -32,6 +32,9 @@ public class TerrainGenerator : MonoBehaviour
         holdMap = new TerrainObject[xSize, ySize, zSize];
         mapOffset = new Vector3((xSize - 1) / 2, (ySize - 1) / 2, (zSize - 1) / 2) * -terrainSize;
         if(debug) print("Map Offset " + mapOffset);
+    }
+    private void Start()
+    {
         Setup();
     }
     private void Update()

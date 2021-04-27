@@ -36,49 +36,28 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Ameye\RockStudio\Scripts\Convex Hull\MIConvexHull\ConvexHull\ObjectManager.cs" />
      <Compile Include="Assets\Asset_ObjectPooler\Pool.cs" />
      <Compile Include="Assets\_Scripts\ButtonController.cs" />
-     <Compile Include="Assets\Ameye\RockStudio\Scripts\Convex Hull\MIConvexHull\ConvexHull\Algorithm\Data.cs" />
      <Compile Include="Assets\_Scripts\GameController.cs" />
      <Compile Include="Assets\_Scripts\TerrainObject.cs" />
-     <Compile Include="Assets\Ameye\RockStudio\Scripts\Convex Hull\MIConvexHull\Configuration.cs" />
-     <Compile Include="Assets\Ameye\RockStudio\Scripts\Convex Hull\MIConvexHull\IVertex.cs" />
-     <Compile Include="Assets\Ameye\RockStudio\Scripts\Convex Hull\MIConvexHull\Triangulation\TriangulationCell.cs" />
      <Compile Include="Assets\Asset_ObjectPooler\IPoolable.cs" />
      <Compile Include="Assets\Asset_ObjectPooler\PoolManagerEditor.cs" />
-     <Compile Include="Assets\Ameye\RockStudio\Scripts\Convex Hull\MIConvexHull\Triangulation.cs" />
      <Compile Include="Assets\_Scripts\UIManager.cs" />
-     <Compile Include="Assets\Ameye\RockStudio\Scripts\Convex Hull\MIConvexHull\ConvexHull\Collections.cs" />
-     <Compile Include="Assets\Ameye\RockStudio\Scripts\Convex Hull\MIConvexHull\ConvexHull\Algorithm\Result.cs" />
      <Compile Include="Assets\_Scripts\PlayerController.cs" />
-     <Compile Include="Assets\Ameye\RockStudio\Scripts\Convex Hull\MIConvexHull\ConvexHull\ConvexFace.cs" />
      <Compile Include="Assets\Asset_ObjectPooler\PoolEditor.cs" />
      <Compile Include="Assets\_Scripts\SaveFloat.cs" />
-     <Compile Include="Assets\Ameye\RockStudio\Scripts\Convex Hull\MIConvexHull\Triangulation\VoronoiMesh.cs" />
      <Compile Include="Assets\_Scripts\HitboxController.cs" />
-     <Compile Include="Assets\Ameye\RockStudio\Scripts\Convex Hull\MIConvexHull\Triangulation\VoronoiEdge.cs" />
      <Compile Include="Assets\Asset_ObjectPooler\Errors.cs" />
-     <Compile Include="Assets\Ameye\RockStudio\Scripts\Handle.cs" />
-     <Compile Include="Assets\Ameye\RockStudio\Scripts\Convex Hull\MIConvexHull\ConvexHull.cs" />
      <Compile Include="Assets\_Scripts\DataManager.cs" />
      <Compile Include="Assets\_Scripts\Sound.cs" />
      <Compile Include="Assets\_Scripts\SpikeController.cs" />
      <Compile Include="Assets\Asset_ObjectPooler\PoolManager.cs" />
      <Compile Include="Assets\_Scripts\TerrainGenerator.cs" />
-     <Compile Include="Assets\Ameye\RockStudio\Scripts\Convex Hull\MIConvexHull\ConvexHull\MathHelper.cs" />
      <Compile Include="Assets\_Scripts\MinotaurController.cs" />
-     <Compile Include="Assets\Ameye\RockStudio\Scripts\Convex Hull\MIConvexHull\ConvexHull\Algorithm\Core.cs" />
-     <Compile Include="Assets\Ameye\RockStudio\Scripts\Convex Hull\MIConvexHull\ConvexHull\DataModel.cs" />
-     <Compile Include="Assets\Ameye\RockStudio\Scripts\Convex Hull\MIConvexHull\Triangulation\DelaunayTrianglationInternal.cs" />
-     <Compile Include="Assets\Ameye\RockStudio\Scripts\Convex Hull\MIConvexHull\ConvexHull\Algorithm\Initialize.cs" />
      <Compile Include="Assets\Asset_ObjectPooler\ObjectPooler.cs" />
-     <Compile Include="Assets\Ameye\RockStudio\Scripts\Convex Hull\MIConvexHull\Vertex.cs" />
-     <Compile Include="Assets\Ameye\RockStudio\Scripts\Convex Hull\MIConvexHull\Triangulation\DelaunayTriangulation.cs" />
      <Compile Include="Assets\_Scripts\HookController.cs" />
      <Compile Include="Assets\_Scripts\CameraRotate.cs" />
      <None Include="Assets\LowPolyParticleEffects\ReadMe.txt" />
-     <None Include="Assets\Ameye\README.txt" />
     <Reference Include="UnityEngine">
         <HintPath>/home/bkapp/Desktop/GameDev/zUnityEngine/2020.3.3f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

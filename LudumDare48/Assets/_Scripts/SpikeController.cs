@@ -48,7 +48,7 @@ public class SpikeController : MonoBehaviour
         FadeInstant();
         if (distance < 10)
         {
-            PlayerController.main.TakeDamage(damageLines[damageLines.Length - 1]);
+            PlayerController.main.TakeDamage(damageLines[Random.Range(0, damageLines.Length - 1)]);
         }
     }
     private IEnumerator Fade(int time, bool setActive)

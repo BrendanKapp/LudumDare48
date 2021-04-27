@@ -42,6 +42,7 @@ public class MinotaurController : MonoBehaviour
         lastSeenPlayer = Time.time;
     }
     private float lastSeenPlayer;
+    [SerializeField]
     private float teleportAfterTime = 5f;
     private void MoveCenter()
     {
