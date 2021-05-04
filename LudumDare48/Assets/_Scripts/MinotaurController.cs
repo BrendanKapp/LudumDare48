@@ -83,7 +83,7 @@ public class MinotaurController : MonoBehaviour
         if (distance < 100)
         {
             LookTowardsPlayer(5);
-            AudioSource roarSound = Sound.GetSound("Roar");
+            AudioSource roarSound = SoundManager.GetSound("Roar");
             roarSound.pitch = Random.Range(0.7f, 1.2f);
             roarSound.volume = Random.value * 2f + 2f;
             roarSound.transform.position = transform.position;
@@ -112,7 +112,7 @@ public class MinotaurController : MonoBehaviour
         CameraRotate.screenShakeAmount += 70;
         HitboxController hitbox = ObjectPooler.PoolObject(explodeEffectName).GetComponent<HitboxController>();
         hitbox.transform.position = hitboxHitPoint.position;
-        AudioSource hitEffectSound = Sound.GetSound("HitEffect");
+        AudioSource hitEffectSound = SoundManager.GetSound("HitEffect");
         hitEffectSound.pitch = Random.Range(0.2f, 0.5f);
         hitEffectSound.volume = Random.value / 2f + 0.5f;
         hitEffectSound.Play();
@@ -128,7 +128,7 @@ public class MinotaurController : MonoBehaviour
         }
         if (toPlayer.sqrMagnitude < 400)
         {
-            AudioSource footstepSound = Sound.GetSound("RockSmash" + Random.Range(1, 4));
+            AudioSource footstepSound = SoundManager.GetSound("RockSmash" + Random.Range(1, 4));
             footstepSound.pitch = Random.Range(0.2f, 0.5f);
             footstepSound.volume = Random.value / 2f + 0.5f;
             footstepSound.transform.position = transform.position;
@@ -144,7 +144,7 @@ public class MinotaurController : MonoBehaviour
         }
         if (toPlayer.sqrMagnitude < 400)
         {
-            AudioSource footstepSound = Sound.GetSound("RockSmash" + Random.Range(1, 4));
+            AudioSource footstepSound = SoundManager.GetSound("RockSmash" + Random.Range(1, 4));
             footstepSound.pitch = Random.Range(0.2f, 0.5f);
             footstepSound.volume = Random.value / 2f + 0.5f;
             footstepSound.transform.position = transform.position;

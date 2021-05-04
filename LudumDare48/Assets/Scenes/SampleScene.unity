@@ -1375,10 +1375,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0dc46c905e104af2c846ce0e43a185d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainMenu: {fileID: 1143256045}
-  gameOver: {fileID: 1180499314}
-  gameActive: {fileID: 1547101476}
-  gameIntro: {fileID: 1077242301}
+  screens:
+  - {fileID: 1077242301}
+  - {fileID: 1143256045}
+  - {fileID: 1547101476}
+  - {fileID: 1180499314}
   fadeToBlackCanvasGroup: {fileID: 1081388786}
   soundHolder: {fileID: 431556101}
   scoreText: {fileID: 10427277}

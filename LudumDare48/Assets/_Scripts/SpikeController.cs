@@ -22,31 +22,26 @@ public class SpikeController : MonoBehaviour
         rb.isKinematic = false;
         rb.velocity = Vector3.zero;
         StartCoroutine(Fade(10, true));
-        //transform.parent = null;
     }
     private void OnCollisionEnter(Collision other)
     {
         if (!isActivated) return;
         isActivated = false;
         rb.isKinematic = true;
-        //transform.parent = other.transform;
         ParticleSystem hitEffect = ObjectPooler.PoolObject(hitEffectName).GetComponent<ParticleSystem>();
         hitEffect.transform.position = transform.localPosition;
         hitEffect.Play();
-        float distance = (PlayerController.main.transform.position - transform.position).sqrMagnitude;
-        if (distance < 400)
+        float sqrDistance = (PlayerController.main.transform.position - transform.position).sqrMagnitude;
+        if (sqrDistance < 400)
         {
-            AudioSource rockSmashSound = Sound.GetSound("RockSmash" + Random.Range(1, 4));
-            rockSmashSound.pitch = Random.Range(0.2f, 0.5f);
-            rockSmashSound.volume = Random.value / 4f + 0.3f;
-            rockSmashSound.Play();
+            SoundManager.GetRandomizedSound("RockSmash" + Random.Range(1, 4), 0.2f, 0.5f, 4f, 0.3f).Play();
         }
-        if (distance < 100)
+        if (sqrDistance < 100)
         {
-            CameraRotate.screenShakeAmount += (int)(500 / distance);
+            CameraRotate.screenShakeAmount += (int)(500 / sqrDistance);
         }
-        FadeInstant();
-        if (distance < 10)
+        Disable();
+        if (sqrDistance < 10)
         {
             PlayerController.main.TakeDamage(damageLines[Random.Range(0, damageLines.Length - 1)]);
         }
@@ -63,7 +58,7 @@ public class SpikeController : MonoBehaviour
         boxCollider.enabled = true;
         isActivated = true;
     }
-    private void FadeInstant()
+    private void Disable()
     {
         gameObject.SetActive(false);
         rb.isKinematic = false;
