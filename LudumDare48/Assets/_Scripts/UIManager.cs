@@ -8,13 +8,14 @@ using UnityEngine.SceneManagement;
 public class UIManager : MonoBehaviour
 {
     [SerializeField]
-    private GameObject mainMenu;
-    [SerializeField]
-    private GameObject gameOver;
-    [SerializeField]
-    private GameObject gameActive;
-    [SerializeField]
-    private GameObject gameIntro;
+    private List<GameObject> screens;
+    /**
+     * 0 is the intro screen
+     * 1 is the main menu
+     * 2 is the game active screen
+     * 3 is the game over screen
+     * **/
+    private int currentScreen = 0;
     private SaveFloat highScore;
     private SaveFloat currentScreenSize;
     private bool isGamePaused = false;
@@ -45,16 +46,27 @@ public class UIManager : MonoBehaviour
     {
         currentScreenSize = new SaveFloat("iCurrentScreenSize");
         highScore = new SaveFloat("iHighScore");
-        gameIntro.SetActive(false);
-        gameActive.SetActive(false);
-        mainMenu.SetActive(false);
-        gameOver.SetActive(false);
+        for (int i = 0; i < screens.Count; i++)
+        {
+            screens[i].SetActive(false);
+        }
         main = this;
     }
     private void Start()
     {
         StartCoroutine("IntroSequence");
         UpdateScreenSize();
+    }
+    /*
+     * @desc sets the UI to the target screen
+     * @param target, the screen to show
+     */
+    public void SetScreen(int target)
+    {
+        PlayMouseClick();
+        screens[currentScreen].SetActive(false);
+        screens[target].SetActive(true);
+        currentScreen = target;
     }
     public void SetHighScore(float newScore)
     {
@@ -88,12 +100,15 @@ public class UIManager : MonoBehaviour
      */
     private IEnumerator IntroSequence()
     {
-        gameIntro.SetActive(true);
+        SetScreen(0);
         InstantToBlack(true);
         FadeToBlack(false);
-        yield return new WaitForSeconds(3);
-        gameIntro.SetActive(false);
-        mainMenu.SetActive(true);
+        #if UNITY_EDITOR
+        yield return new WaitForSeconds(0.1f);
+        #else
+        yield return new WaitForSeconds(3);;
+        #endif
+        SetScreen(1);
     }
     /*
      * @desc used for when the player clicks the play button
@@ -104,21 +119,17 @@ public class UIManager : MonoBehaviour
     }
     private void StartGame()
     {
-        mainMenu.SetActive(false);
-        gameOver.SetActive(false);
-        gameActive.SetActive(true);
+        SetScreen(2);
         GameController.main.StartGame();
     }
     public void ReturnToMainMenu()
     {
-        gameOver.SetActive(false);
-        mainMenu.SetActive(true);
+        SetScreen(1);
     }
     public void ShowEndGame (string byWho)
     {   
         byWhoText.text = "\"" + byWho + "\"";
-        gameOver.SetActive(true);
-        gameActive.SetActive(false);
+        SetScreen(3);
     }
     public void SetSound ()
     {
