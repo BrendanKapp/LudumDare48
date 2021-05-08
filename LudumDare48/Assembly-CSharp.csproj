@@ -37,9 +37,12 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Asset_ObjectPooler\Pool.cs" />
+     <Compile Include="Assets\BrokenVector\UltimateDungeonPack\Scripts\LightImprove.cs" />
      <Compile Include="Assets\_Scripts\ButtonController.cs" />
      <Compile Include="Assets\_Scripts\GameController.cs" />
      <Compile Include="Assets\_Scripts\TerrainObject.cs" />
+     <Compile Include="Assets\BrokenVector\UltimateDungeonPack\Scenes\Demo\FPControls\Scripts\MouseCamLook.cs" />
+     <Compile Include="Assets\_Scripts\TranslationController.cs" />
      <Compile Include="Assets\Asset_ObjectPooler\IPoolable.cs" />
      <Compile Include="Assets\Asset_ObjectPooler\PoolManagerEditor.cs" />
      <Compile Include="Assets\_Scripts\UIManager.cs" />
@@ -49,6 +52,8 @@
      <Compile Include="Assets\_Scripts\HitboxController.cs" />
      <Compile Include="Assets\Asset_ObjectPooler\Errors.cs" />
      <Compile Include="Assets\_Scripts\DataManager.cs" />
+     <Compile Include="Assets\_Scripts\SoundManager.cs" />
+     <Compile Include="Assets\_Scripts\LightController.cs" />
      <Compile Include="Assets\_Scripts\SpikeController.cs" />
      <Compile Include="Assets\Asset_ObjectPooler\PoolManager.cs" />
      <Compile Include="Assets\_Scripts\TerrainGenerator.cs" />
@@ -56,8 +61,6 @@
      <Compile Include="Assets\Asset_ObjectPooler\ObjectPooler.cs" />
      <Compile Include="Assets\_Scripts\HookController.cs" />
      <Compile Include="Assets\_Scripts\CameraRotate.cs" />
-     <Compile Include="Assets\_Scripts\SoundManager.cs" />
-     <Compile Include="Assets\_Scripts\TranslationController.cs" />
      <None Include="Assets\LowPolyParticleEffects\ReadMe.txt" />
     <Reference Include="UnityEngine">
         <HintPath>/home/bkapp/Desktop/GameDev/zUnityEngine/2020.3.3f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>

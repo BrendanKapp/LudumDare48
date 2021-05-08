@@ -6,16 +6,6 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public static PlayerController main;
-    [SerializeField]
-    private float hookPower = 50;
-    [SerializeField]
-    private float pullPower = 50;
-    [SerializeField]
-    private HookController hook;
-    [SerializeField]
-    private Transform shootTarget;
-
-    private bool hookActive = false;
     private Rigidbody rb;
     private CharacterController characterController;
     private FirstPersonController firstPersonController;
@@ -32,22 +22,6 @@ public class PlayerController : MonoBehaviour
         firstPersonController.enabled = false;
         firstPersonController.EnableCursor();
     }
-    private void PullTowards()
-    {
-        Vector3 dir = (hook.transform.position - transform.position);
-        characterController.Move(dir * pullPower * Time.fixedDeltaTime);
-    }
-    private void ShootHook()
-    {
-        hook.rb.position = shootTarget.position;
-        Vector3 dir = shootTarget.transform.forward.normalized * hookPower;
-        hook.rb.velocity = dir;
-        hook.Shoot();
-    }
-    private void RetractHook()
-    {
-
-    }
     public void TakeDamage(string byWho)
     {
         firstPersonController.enabled = false;
@@ -59,11 +33,5 @@ public class PlayerController : MonoBehaviour
     {
         firstPersonController.enabled = true;
         firstPersonController.DisableCursor();
-    }
-    private IEnumerator RetrackHookRoutine()
-    {
-        float distance = (hook.transform.position - shootTarget.transform.position).sqrMagnitude;
-        //while (hook.transform.position )
-        yield return null;
     }
 }

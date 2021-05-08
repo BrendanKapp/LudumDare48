@@ -9,6 +9,9 @@ public class GameController : MonoBehaviour
     private bool isPlaying = true;
 
     [SerializeField]
+    private bool enemiesActive = true;
+
+    [SerializeField]
     private TerrainGenerator terrainGenerator;
 
     [SerializeField]
@@ -29,8 +32,11 @@ public class GameController : MonoBehaviour
         ObjectPooler.DePoolAll("main");
         startTime = Time.time;
         PlayerController.main.Activate();
-        minotaurController.gameObject.SetActive(true);
-        minotaurController.transform.position = Vector3.down * -100;
+        if (enemiesActive)
+        {
+            minotaurController.gameObject.SetActive(true);
+            minotaurController.transform.position = Vector3.down * -100;
+        }
     }
     public void StopGame()
     {
@@ -42,7 +48,7 @@ public class GameController : MonoBehaviour
     {
         while (true)
         {
-            DropSpikes();
+            if (enemiesActive) DropSpikes();
             UpdateScore();
             yield return new WaitForSeconds(0.25f);
         }
